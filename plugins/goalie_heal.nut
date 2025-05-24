@@ -18,7 +18,7 @@ GoalieHeal.Timer.Create("Heal", HEAL_DELAY, function() {
         local team = player.GetTeam();
         local goal = PassTime.Goal.Get(team);
         if (!goal)
-            return;
+            continue;
 
         local goalPosition = goal.GetCenter();
         local playerPosition = player.GetCenter();
