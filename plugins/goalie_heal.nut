@@ -16,6 +16,8 @@ GoalieHeal.HealPlayer <- function(player, value) {
 GoalieHeal.Timer.Create("Heal", HEAL_DELAY, function() {
     foreach (player in AllPlayers()) {
         local team = player.GetTeam();
+        if (!PassTime.Team.IsRedOrBlue(team))
+            continue;
         local goal = PassTime.Goal.Get(team);
         if (!goal)
             continue;

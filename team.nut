@@ -8,6 +8,10 @@ Team.GetName <- function(team) {
     return Team.names[team];
 }
 
+Team.IsRedOrBlue <- function(team) {
+    return team == 2 || team == 3;
+}
+
 local oppositeTeam = { [2] = 3, [3] = 2 };
 Team.GetOpposite <- function(team) {
     if (!(team in oppositeTeam)) return team;
