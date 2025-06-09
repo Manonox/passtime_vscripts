@@ -3,7 +3,7 @@ local Goal = PassTime.CreateModule("Goal");
 
 Goal.Get <- function(team) {
     if (!(team in Goal.goals))
-        null;
+        return null;
     if (Goal.goals[team].len() == 0)
         return null;
     return Goal.goals[team][0];
